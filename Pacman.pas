@@ -1,8 +1,8 @@
 program Pacman;
 uses crt;
 const
-  dx:array[1..4]of shortint=(0,0,-1,1);//方向：上下左右
-  dy:array[1..4]of shortint=(1,-1,0,0);
+  dx:array[1..4]of shortint=(0,1,0,-1);//方向：上右下左
+  dy:array[1..4]of shortint=(1,0,-1,0);
 type
   location=record
     x,y:byte;
@@ -11,10 +11,11 @@ var
   map:array[1..10,1..16]of boolean;
   bean:array[1..16,1..10]of boolean;
   i,k,l,bn,time,gn:byte;
-  j:word;
+  j,score:word;
   ghost:array[1..5]of location;
-  me:location;
-  bool:boolean;
+  dgh:array[1..5]of byte;
+  me,medicine:location;
+  bool,strong:boolean;
   path:array[1..16,1..10]of byte;
 procedure fill(a:location; b:byte);//把周围四个方向上标数
 var
@@ -30,7 +31,7 @@ function ai(now,want:location):byte;
 var
   a:location;
   x,y:byte;
-  k,di:byte;
+  i,di:byte;
 procedure find(now:location);
 var
   i:byte;
@@ -52,31 +53,54 @@ begin
 end;
 
 begin
+  if not strong then begin
   fillchar(path,sizeof(path),0);
   path[now.x,now.y]:=1;
   fill(now,2);
-  k:=1;
+  i:=1;
   repeat
-    inc(k);
+    inc(i);
     for x:=1 to 16 do
     for y:=1 to 10 do
     if path[want.x,want.y]>0 then break else
-    if path[x,y]=k then begin
+    if path[x,y]=i then begin
       a.x:=x;
       a.y:=y;
-      fill(a,k+1);
+      fill(a,i+1);
     end;
   until path[want.x,want.y]>0;
   find(want);
   case di of
-  1:ai:=2;
-  2:ai:=1;
-  3:ai:=4;
-  4:ai:=3;
+  1:ai:=3;
+  2:ai:=4;
+  3:ai:=1;
+  4:ai:=2;
   end;
+  end else
+  begin
+    if(dgh[k]=0)or(not(map[now.y+dy[dgh[k]],now.x+dx[dgh[k]]]))then
+    begin
+      randomize;
+      di:=random(4);
+      for ai:=di to 4 do
+      if map[now.y+dy[ai],now.x+dx[ai]] then begin dgh[k]:=ai;exit;end;
+      for ai:=1 to di-1 do
+      if map[now.y+dy[ai],now.x+dx[ai]] then begin dgh[k]:=ai;exit;end;
+    end else exit(dgh[k]);
+  end;
+end;
+procedure randommedicine;
+begin
+  repeat
+    randomize;
+    medicine.x:=random(16);
+    medicine.y:=random(10);
+  until map[medicine.y,medicine.x];
 end;
 procedure originalizedata;
 begin
+  score:=0;
+  strong:=false;
   fillchar(bean,sizeof(bean),true);
   bn:=80;
   ghost[1].x:=2;ghost[1].y:=2;
@@ -137,6 +161,15 @@ begin
     gotoxy(ghost[k].x*2-1,ghost[k].y);
     write('*');
   end;
+  if(medicine.x>0)and(medicine.y>0)then
+  begin
+    gotoxy(medicine.x*2-1,medicine.y);
+    textcolor(blue);
+    write('*');
+  end;
+  gotoxy(24,11);
+  textcolor(black);
+  write('Score:',score,'0');
   gotoxy(me.x*2-1,me.y);
   textcolor(green);
   write('*');
@@ -492,13 +525,11 @@ begin
       case ord(readkey) of
       80:if a<4 then inc(a) else a:=1;
       72:if a>1 then dec(a) else a:=4;
-      else continue;
       end;
+      gotoxy(5,2*a+1);
+      write('>');
       end;
-    else continue;
     end;
-    gotoxy(5,2*a+1);
-    write('>');
   end;
 end;
 procedure gamecontrol;
@@ -522,6 +553,10 @@ begin
       end;
       if bean[me.x,me.y] then begin
         dec(bn);
+        inc(score);
+        gotoxy(30,11);
+        textcolor(black);
+        write(score,'0');
         bean[me.x,me.y]:=false;
       end;
       gotoxy(me.x*2-1,me.y);
@@ -535,9 +570,8 @@ begin
     end
     else continue;
     end;
-    if j=time then
+    if j mod time=0 then
     begin
-      j:=0;
       for k:=1 to gn do
       begin
         gotoxy(ghost[k].x*2-1,ghost[k].y);
@@ -546,6 +580,12 @@ begin
           textcolor(yellow);
           write('.');
           end;
+        if (ghost[k].x=medicine.x)and(ghost[k].y=medicine.y)then
+        begin
+          gotoxy(ghost[k].x*2-1,ghost[k].y);
+          textcolor(Blue);
+          write('*');
+        end;
         i:=ai(ghost[k],me);
         inc(ghost[k].x,dx[i]);
         inc(ghost[k].y,dy[i]);
@@ -563,24 +603,79 @@ begin
       end;
       gotoxy(me.x*2-1,me.y);
     end;
+    if ((me.x=medicine.x)and(me.y=medicine.y))or(j=2000) then
+    begin
+      j:=j mod time+1;
+      gotoxy(medicine.x*2-1,medicine.y);
+      if (me.x=medicine.x)and(me.y=medicine.y)then
+      begin
+        textcolor(green);
+        write('*');
+        strong:=true;
+      end else
+      if not bean[medicine.x,medicine.y]then write(' ')
+      else begin
+        textcolor(yellow);
+        write('.');
+      end;
+      medicine.x:=0;
+      medicine.y:=0;
+      gotoxy(me.x*2-1,me.y);
+    end;
+    if j=1000 then
+    if not strong then begin
+      randommedicine;
+      gotoxy(medicine.x*2-1,medicine.y);
+      textcolor(Blue);
+      write('*');
+      gotoxy(me.x*2-1,me.y);
+    end else begin
+      j:=j mod time+1;
+      strong:=false;
+    end;
     for k:=1 to gn do
       if (me.x=ghost[k].x)and(me.y=ghost[k].y) then
+      if not strong then
       begin
         clrscr;
         gotoxy(12,5);
         textcolor(black);
         write('GAME OVER');
-        gotoxy(6,6);
+        gotoxy(8,6);
+        write('Your score is ',score,'0');
+        gotoxy(6,7);
         write('Press Enter to continue...');
         readln;
         exit;
+      end else
+      begin
+        case k of
+        1:begin ghost[1].x:=2;ghost[1].y:=2;end;
+        2:begin ghost[2].x:=9;ghost[2].y:=2;end;
+        3:begin ghost[3].x:=15;ghost[3].y:=2;end;
+        4:begin ghost[4].x:=15;ghost[4].y:=6;end;
+        5:begin ghost[5].x:=2;ghost[5].y:=6;end;
+        end;
+        gotoxy(me.x*2-1,me.y);
+        textcolor(green);
+        write('*');
+        gotoxy(ghost[k].x*2-1,ghost[k].y);
+        textcolor(red);
+        write('*');
+        inc(score,20);
+        gotoxy(30,11);
+        textcolor(black);
+        write(score,0);
+        gotoxy(me.x*2-1,me.y);
       end;
   until bn=0;
   clrscr;
   gotoxy(12,5);
   textcolor(black);
   write('YOU WIN!');
-  gotoxy(6,6);
+  gotoxy(8,6);
+  write('Your score is ',score,'0');
+  gotoxy(6,7);
   write('Press Enter to continue...');
   readln;
 end;

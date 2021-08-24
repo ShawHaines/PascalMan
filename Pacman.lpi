@@ -40,139 +40,139 @@
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="Pacman.pas"/>
+        <Filename Value="pacman.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Pacman"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="549"/>
-        <CursorPos X="26" Y="567"/>
-        <FoldState Value=" T3I0902311L"/>
-        <UsageCount Value="44"/>
+        <TopLine Value="535"/>
+        <CursorPos X="14" Y="573"/>
+        <FoldState Value=" T3J092 piaiT07[94Xj00}i0118"/>
+        <UsageCount Value="46"/>
         <Loaded Value="True"/>
       </Unit0>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="pacman.pas"/>
-        <Caret Line="274" Column="29" TopLine="248"/>
+        <Caret Line="254" Column="10" TopLine="228"/>
       </Position1>
       <Position2>
-        <Filename Value="pacman.pas"/>
-        <Caret Line="275" Column="9" TopLine="255"/>
+        <Filename Value="Pacman.pas"/>
+        <Caret Line="265" Column="12" TopLine="225"/>
       </Position2>
       <Position3>
-        <Filename Value="pacman.pas"/>
-        <Caret Line="298" Column="7" TopLine="277"/>
+        <Filename Value="Pacman.pas"/>
+        <Caret Line="171" Column="19" TopLine="148"/>
       </Position3>
       <Position4>
-        <Filename Value="pacman.pas"/>
-        <Caret Line="275" Column="11" TopLine="257"/>
+        <Filename Value="Pacman.pas"/>
+        <Caret Line="221" Column="18" TopLine="205"/>
       </Position4>
       <Position5>
         <Filename Value="pacman.pas"/>
-        <Caret Line="277" Column="5" TopLine="258"/>
+        <Caret Line="269" Column="22" TopLine="258"/>
       </Position5>
       <Position6>
         <Filename Value="pacman.pas"/>
-        <Caret Line="292" Column="19" TopLine="274"/>
+        <Caret Line="268" Column="18" TopLine="255"/>
       </Position6>
       <Position7>
         <Filename Value="pacman.pas"/>
-        <Caret Line="342" Column="11" TopLine="330"/>
+        <Caret Line="274" Column="29" TopLine="248"/>
       </Position7>
       <Position8>
         <Filename Value="pacman.pas"/>
-        <Caret Line="335" Column="25" TopLine="321"/>
+        <Caret Line="275" Column="9" TopLine="255"/>
       </Position8>
       <Position9>
         <Filename Value="pacman.pas"/>
-        <Caret Line="281" Column="9" TopLine="259"/>
+        <Caret Line="298" Column="7" TopLine="277"/>
       </Position9>
       <Position10>
         <Filename Value="pacman.pas"/>
-        <Caret Line="221" Column="23" TopLine="14"/>
+        <Caret Line="275" Column="11" TopLine="257"/>
       </Position10>
       <Position11>
         <Filename Value="pacman.pas"/>
-        <Caret Line="127" Column="17" TopLine="113"/>
+        <Caret Line="277" Column="5" TopLine="258"/>
       </Position11>
       <Position12>
         <Filename Value="pacman.pas"/>
-        <Caret Line="423" Column="31" TopLine="119"/>
+        <Caret Line="292" Column="19" TopLine="274"/>
       </Position12>
       <Position13>
         <Filename Value="pacman.pas"/>
-        <Caret Line="399" Column="21" TopLine="395"/>
+        <Caret Line="342" Column="11" TopLine="330"/>
       </Position13>
       <Position14>
         <Filename Value="pacman.pas"/>
-        <Caret Line="410" Column="23" TopLine="392"/>
+        <Caret Line="335" Column="25" TopLine="321"/>
       </Position14>
       <Position15>
-        <Filename Value="Pacman.pas"/>
-        <Caret Line="438" Column="11" TopLine="216"/>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="281" Column="9" TopLine="259"/>
       </Position15>
       <Position16>
-        <Filename Value="Pacman.pas"/>
-        <Caret Line="436" Column="13" TopLine="422"/>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="221" Column="23" TopLine="14"/>
       </Position16>
       <Position17>
-        <Filename Value="Pacman.pas"/>
-        <Caret Line="388" Column="20" TopLine="378"/>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="127" Column="17" TopLine="113"/>
       </Position17>
       <Position18>
-        <Filename Value="Pacman.pas"/>
-        <Caret Line="371" Column="21" TopLine="359"/>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="423" Column="31" TopLine="119"/>
       </Position18>
       <Position19>
-        <Filename Value="Pacman.pas"/>
-        <Caret Line="141" Column="27" TopLine="128"/>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="399" Column="21" TopLine="395"/>
       </Position19>
       <Position20>
-        <Filename Value="Pacman.pas"/>
-        <Caret Line="594" Column="18" TopLine="570"/>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="410" Column="23" TopLine="392"/>
       </Position20>
       <Position21>
         <Filename Value="Pacman.pas"/>
-        <Caret Line="81" Column="20" TopLine="29"/>
+        <Caret Line="438" Column="11" TopLine="216"/>
       </Position21>
       <Position22>
         <Filename Value="Pacman.pas"/>
-        <Caret Line="635" Column="24" TopLine="606"/>
+        <Caret Line="436" Column="13" TopLine="422"/>
       </Position22>
       <Position23>
         <Filename Value="Pacman.pas"/>
-        <Caret Line="85" Column="1" TopLine="4"/>
+        <Caret Line="388" Column="20" TopLine="378"/>
       </Position23>
       <Position24>
         <Filename Value="Pacman.pas"/>
-        <Caret Line="77" Column="5" TopLine="44"/>
+        <Caret Line="371" Column="21" TopLine="359"/>
       </Position24>
       <Position25>
         <Filename Value="Pacman.pas"/>
-        <Caret Line="90" Column="7" TopLine="113"/>
+        <Caret Line="141" Column="27" TopLine="128"/>
       </Position25>
       <Position26>
         <Filename Value="Pacman.pas"/>
-        <Caret Line="139" Column="7" TopLine="125"/>
+        <Caret Line="594" Column="18" TopLine="570"/>
       </Position26>
       <Position27>
         <Filename Value="Pacman.pas"/>
-        <Caret Line="528" Column="20" TopLine="511"/>
+        <Caret Line="81" Column="20" TopLine="29"/>
       </Position27>
       <Position28>
         <Filename Value="Pacman.pas"/>
-        <Caret Line="529" Column="38" TopLine="508"/>
+        <Caret Line="635" Column="24" TopLine="606"/>
       </Position28>
       <Position29>
-        <Filename Value="Pacman.pas"/>
-        <Caret Line="524" Column="17" TopLine="510"/>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="513" Column="8" TopLine="460"/>
       </Position29>
       <Position30>
-        <Filename Value="Pacman.pas"/>
-        <Caret Line="572" Column="19" TopLine="556"/>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="89" Column="27" TopLine="62"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
