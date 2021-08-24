@@ -1,0 +1,7 @@
+/backup
+lib/
+*.exe
+*.res
+/Pacman 1.0
+/Pacman最新版本
+*.bak

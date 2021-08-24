@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="pacman.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Pacman"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="15" HistoryIndex="14">
+      <Position1>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="101" Column="2" TopLine="72"/>
+      </Position1>
+      <Position2>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="22" Column="68" TopLine="7"/>
+      </Position2>
+      <Position3>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="30" Column="6" TopLine="19"/>
+      </Position3>
+      <Position4>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="34" Column="7" TopLine="19"/>
+      </Position4>
+      <Position5>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="30" Column="6" TopLine="18"/>
+      </Position5>
+      <Position6>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="47" Column="11" TopLine="25"/>
+      </Position6>
+      <Position7>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="18" Column="4" TopLine="3"/>
+      </Position7>
+      <Position8>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="54" Column="13" TopLine="37"/>
+      </Position8>
+      <Position9>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="59" Column="10" TopLine="44"/>
+      </Position9>
+      <Position10>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="64" Column="3" TopLine="51"/>
+      </Position10>
+      <Position11>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="141" Column="9" TopLine="109"/>
+      </Position11>
+      <Position12>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="151" Column="7" TopLine="116"/>
+      </Position12>
+      <Position13>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="150" Column="27" TopLine="132"/>
+      </Position13>
+      <Position14>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="151" Column="32" TopLine="134"/>
+      </Position14>
+      <Position15>
+        <Filename Value="pacman.pas"/>
+        <Caret Line="155" Column="21" TopLine="137"/>
+      </Position15>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
